@@ -1,0 +1,4 @@
+# Project exclude paths
+/image-server-rpc/target/
+/image-server-service/target/
+/image-server-web/target/
