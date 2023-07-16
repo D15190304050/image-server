@@ -1,0 +1,27 @@
+server:
+    port: 6527
+
+spring:
+    profiles:
+        active: dev
+    application:
+        name: image-server
+    jackson:
+        date-format: yyyy-MM-dd HH:mm:ss
+        time-zone: GMT+8
+        default-property-inclusion: ALWAYS
+    cloud:
+        nacos:
+            discovery:
+                enabled: true
+                register-enabled: true
+
+logging:
+    pattern:
+        console: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%thread]){faint} %clr(%-40.40logger{39}){cyan} %L %clr(:){faint} %m%n"
+    level:
+        root: INFO
+
+dubbo:
+    service:
+        version: @project.version@

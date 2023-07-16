@@ -1,0 +1,26 @@
+spring:
+    cloud:
+        nacos:
+            discovery:
+                server-addr: localhost:8848
+
+gateway-address: localhost:9527
+
+dubbo:
+    application:
+        name: ${spring.application.name}-dubbo
+    registry:
+        address: nacos://${spring.cloud.nacos.discovery.server-addr}
+    protocol:
+        name: dubbo
+        port: -1
+
+dataworks:
+    easy-minio:
+        endpoint: http://localhost:9000
+        access-key: minioadmin
+        secret-key: minioadmin
+        bucket-name-avatar: avatar
+
+images:
+    avatar-url-prefix: http://${gateway-address}/api/image/avatar/
