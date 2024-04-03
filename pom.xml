@@ -81,7 +81,6 @@
                 <version>${dubbo.version}</version>
             </dependency>
 
-            <!-- https://mvnrepository.com/artifact/org.apache.dubbo/dubbo-registry-nacos -->
             <dependency>
                 <groupId>org.apache.dubbo</groupId>
                 <artifactId>dubbo-registry-nacos</artifactId>
@@ -94,7 +93,6 @@
                 <version>${dubbo.version}</version>
             </dependency>
 
-            <!-- Dependencies for nacos -->
             <dependency>
                 <groupId>com.alibaba.nacos</groupId>
                 <artifactId>nacos-client</artifactId>
